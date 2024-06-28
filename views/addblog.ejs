@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Blog</title>
+  <%- include('./partials/head') %>
+  
+</head>
+<body>
+    <%- include('./partials/script') %>
+    
+    <%- include('./partials/nav') %>
+    <div class="container mt-5">
+        <h1 class="mb-4">Add New Blog</h1>
+        <form action="/blogs/add-new" method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+          </div>
+          <div class="mb-3">
+            <label for="blogbody" class="form-label">Blog Body</label>
+            <textarea class="form-control" id="blogbody" name="blogbody" rows="10" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="image" name="image" aria-describedby="image" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Blog</button>
+        </form>
+      </div>
+</body>
+</html>
